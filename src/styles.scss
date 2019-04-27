@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/shared/mixins/reset";
+@import "./app/shared/mixins/variable";
+@import "./app/shared/mixins/monserrat.font";
+
+body {
+  background-color: #eff8f5;
+  font-family: $font-family;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+// ELEMENTOS DEL FORMULARIO
+
+.input-text {
+  &:hover,
+  &:focus {
+    outline: none !important;
+  }
+
+  color: $text;
+
+  &::placeholder {
+    // opacity: 50%;
+    color: rgba(112, 112, 112, 0.5);
+  }
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-control {
+  border: 1px solid $input-border;
+  border-radius: 5px;
+  padding: 19px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn {
+  height: 57px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    outline: none !important;
+  }
+}
